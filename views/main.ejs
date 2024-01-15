@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1087612528674-1qol416ev18qfnrhqnmau35fac4oud93.apps.googleusercontent.com">
+
+    <title>Donate</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--google client id: 1087612528674-1qol416ev18qfnrhqnmau35fac4oud93.apps.googleusercontent.com -->
+
+    <script>
+        gapi.load('auth2', function() {
+          gapi.auth2.init({
+            client_id: '1087612528674-1qol416ev18qfnrhqnmau35fac4oud93.apps.googleusercontent.com',
+          });
+        });
+    </script>
+
+</head>
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <h1>Log In</h1>    
+    <!-- <div class="cont1">
+        <button id="googlebtn" class="btns">Log in with Google</button>
+    </div> -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!-- <form method="post">
+
+    </form> -->
+
+</body>
+</html>

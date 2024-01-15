@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: rgba(128, 128, 128, 0.215);
+}
+
+.btns{
+    background-color: grey;
+    border-radius: 1em;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.btns:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+    transition: 0.5s;
+}
