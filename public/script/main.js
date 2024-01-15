@@ -8,3 +8,10 @@ function onSignIn(user){
         console.log(err);
     }
 }
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        console.log(response);
+        statusChangeCallback(response);
+    });
+  }

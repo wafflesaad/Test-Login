@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="1087612528674-1qol416ev18qfnrhqnmau35fac4oud93.apps.googleusercontent.com">
+    
     <title>Donate</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/main.css">
 
     <!--google client id: 1087612528674-1qol416ev18qfnrhqnmau35fac4oud93.apps.googleusercontent.com -->
-
+    <!-- google stuff -->
+    <meta name="google-signin-client_id" content="1087612528674-1qol416ev18qfnrhqnmau35fac4oud93.apps.googleusercontent.com">
     <script>
         gapi.load('auth2', function() {
           gapi.auth2.init({
@@ -19,17 +20,47 @@
     </script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+
 </head>
 <body>
+  <!-- fb stuff -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{api-version}'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0&appId=751246486444611" nonce="u7PYyLAw"></script>
+  
+  <fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+  </fb:login-button>
 
     <h1>Log In</h1>    
     <!-- <div class="cont1">
         <button id="googlebtn" class="btns">Log in with Google</button>
     </div> -->
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <!-- <form method="post">
+    
 
-    </form> -->
+    <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
 </body>
 </html>
