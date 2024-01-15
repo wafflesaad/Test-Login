@@ -20,6 +20,6 @@ res.render("")
 // git config --global user.email "isaadibrahim2005@gmail.com"
 //   git config --global user.name "Your Name"
 
-app.listen(port,()=>{
+app.listen(PORT,()=>{
     console.log("App running on port " + port);
 });
